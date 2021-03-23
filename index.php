@@ -1,1 +1,1 @@
-<?php include_once("crowdLevelDashboard.html"); ?>
+<?php header('Location: /dbtt-project/crowdLevelDashboard.html'); ?>
