@@ -33,7 +33,7 @@ var ctx = document.getElementById("myBarChart1A");
 var myChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: ["Current Hygiene Level"],
+    labels: ["Current Hygiene Level", ""],
     datasets: [{
       label: '# of Votes',
       data: [75, 25],
@@ -75,7 +75,7 @@ var ctx = document.getElementById("myBarChart1B");
 var myChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: ["Current Hygiene Level"],
+    labels: ["Current Hygiene Level", ""],
     datasets: [{
       label: '# of Votes',
       data: [65, 35],
@@ -126,7 +126,7 @@ var myChart = new Chart(ctx, {
   
   type: 'doughnut',
   data: {
-    labels: ["Current Hygiene Level"],
+    labels: ["Current Hygiene Level",""],
     datasets: [{
       label: '# of Votes',
       data: [43, 57],
@@ -169,7 +169,7 @@ var ctx = document.getElementById("myBarChart1D");
 var myChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: ["Current Hygiene Level"],
+    labels: ["Current Hygiene Level",""],
     datasets: [{
       label: '# of Votes',
       data: [80, 20],
@@ -211,7 +211,7 @@ var ctx = document.getElementById("myBarChart1E");
 var myChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: ["Current Hygiene Level"],
+    labels: ["Current Hygiene Level",""],
     datasets: [{
       label: '# of Votes',
       data: [55, 45],
@@ -253,7 +253,7 @@ var ctx = document.getElementById("myBarChart1F");
 var myChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: ["Current Hygiene Level"],
+    labels: ["Current Hygiene Level",""],
     datasets: [{
       label: '# of Votes',
       data: [75, 25],

@@ -32,7 +32,7 @@ var ctx = document.getElementById("myBarChart1A");
 var myChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: ["Number of Occupants"],
+    labels: ["Number of Occupants",""],
     datasets: [{
       label: '# of Votes',
       data: [0, 15],
@@ -65,7 +65,7 @@ var ctx = document.getElementById("myBarChart1B");
 var myChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: ["Number of Occupants"],
+    labels: ["Number of Occupants",""],
     datasets: [{
       label: '# of Votes',
       data: [20 , 0],
@@ -99,7 +99,7 @@ var ctx = document.getElementById("myBarChart1C");
 var myChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: ["Number of Occupants"],
+    labels: ["Number of Occupants",""],
     datasets: [{
       label: '# of Votes',
       data: [16, 4],
@@ -133,7 +133,7 @@ var ctx = document.getElementById("myBarChart1D");
 var myChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: ["Number of Occupants"],
+    labels: ["Number of Occupants",""],
     datasets: [{
       label: '# of Votes',
       data: [16, 4],
@@ -167,7 +167,7 @@ var ctx = document.getElementById("myBarChart1E");
 var myChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: ["Number of Occupants"],
+    labels: ["Number of Occupants",""],
     datasets: [{
       label: '# of Votes',
       data: [0, 20],
@@ -201,7 +201,7 @@ var ctx = document.getElementById("myBarChart1F");
 var myChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: ["Number of Occupants"],
+    labels: ["Number of Occupants",""],
     datasets: [{
       label: '# of Votes',
       data: [0, 15],
