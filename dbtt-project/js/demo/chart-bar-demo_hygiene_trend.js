@@ -32,13 +32,20 @@ var ctx = document.getElementById("myBarChart1A");
 var myBarChart1A = new Chart(ctx, {
   type: 'bar',
   data: {
-    labels: ["1:00pm", "2:00pm", "3:00pm", "4:00pm", "5:00pm", "6:00pm"],
+    labels: ["4:00pm", "8:00pm", "12:00am", "4:00am", "8:00am", "12:00pm"],
     datasets: [{
-      label: "Occupants",
-      backgroundColor: "#4e73df",
-      hoverBackgroundColor: "#2e59d9",
+      label: 'Cleanliness Threshold: ',
+      data: [50, 50, 50, 50, 50, 50],
+      borderColor: "#e74a3b",
+      backgroundColor: '#00000000',
+      // Changes this dataset to become a line
+      type: 'line'
+  },{
+      label: "Cleanliness (%): ",
+      backgroundColor: "#00EE00",
+      hoverBackgroundColor: "#00CD00",
       borderColor: "#4e73df",
-      data: [2, 5, 12, 6, 8, 10],
+      data: [95, 95, 94, 92, 90, 88],
     }],
   },
   options: {
@@ -68,7 +75,7 @@ var myBarChart1A = new Chart(ctx, {
       yAxes: [{
         ticks: {
           min: 0,
-          max: 30,
+          max: 100,
           maxTicksLimit: 5,
           padding: 10,
           // Include a dollar sign in the ticks
@@ -111,16 +118,23 @@ var myBarChart1A = new Chart(ctx, {
 });
 
 var ctx = document.getElementById("myBarChart1B");
-var myBarChart1B = new Chart(ctx, {
-  type: 'horizontalBar',
+var myBarChart1A = new Chart(ctx, {
+  type: 'bar',
   data: {
-    labels: ["January", "February", "March", "April", "May", "June"],
+    labels: ["4:00pm", "8:00pm", "12:00am", "4:00am", "8:00am", "12:00pm"],
     datasets: [{
-      label: "Revenue",
-      backgroundColor: "#4e73df",
-      hoverBackgroundColor: "#2e59d9",
+      label: 'Cleanliness Threshold: ',
+      data: [50, 50, 50, 50, 50, 50],
+      borderColor: "#e74a3b",
+      backgroundColor: '#00000000',
+      // Changes this dataset to become a line
+      type: 'line'
+  },{
+      label: "Cleanliness (%): ",
+      backgroundColor: "#00EE00",
+      hoverBackgroundColor: "#00CD00",
       borderColor: "#4e73df",
-      data: [4215, 5312, 6251, 7841, 9821, 14984],
+      data: [90, 87, 84, 82, 80, 78],
     }],
   },
   options: {
@@ -150,12 +164,12 @@ var myBarChart1B = new Chart(ctx, {
       yAxes: [{
         ticks: {
           min: 0,
-          max: 15000,
+          max: 100,
           maxTicksLimit: 5,
           padding: 10,
           // Include a dollar sign in the ticks
           callback: function(value, index, values) {
-            return '$' + number_format(value);
+            return number_format(value);
           }
         },
         gridLines: {
@@ -185,23 +199,31 @@ var myBarChart1B = new Chart(ctx, {
       callbacks: {
         label: function(tooltipItem, chart) {
           var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          return datasetLabel + ': $' + number_format(tooltipItem.yLabel);
+          return datasetLabel + number_format(tooltipItem.yLabel);
         }
       }
     },
   }
 });
+
 var ctx = document.getElementById("myBarChart1C");
-var myBarChart1C = new Chart(ctx, {
-  type: 'horizontalBar',
+var myBarChart1A = new Chart(ctx, {
+  type: 'bar',
   data: {
-    labels: ["January", "February", "March", "April", "May", "June"],
+    labels: ["4:00pm", "8:00pm", "12:00am", "4:00am", "8:00am", "12:00pm"],
     datasets: [{
-      label: "Revenue",
-      backgroundColor: "#4e73df",
-      hoverBackgroundColor: "#2e59d9",
+      label: 'Cleanliness Threshold: ',
+      data: [50, 50, 50, 50, 50, 50],
+      borderColor: "#e74a3b",
+      backgroundColor: '#00000000',
+      // Changes this dataset to become a line
+      type: 'line'
+  },{
+      label: "Cleanliness (%): ",
+      backgroundColor: ["#00EE00", "#00EE00", "#00EE00", "#00EE00", "#00EE00", "#e74a3b"],
+      hoverBackgroundColor: "#00CD00",
       borderColor: "#4e73df",
-      data: [4215, 5312, 6251, 7841, 9821, 14984],
+      data: [60, 58, 55, 53, 51, 43],
     }],
   },
   options: {
@@ -231,12 +253,12 @@ var myBarChart1C = new Chart(ctx, {
       yAxes: [{
         ticks: {
           min: 0,
-          max: 15000,
+          max: 100,
           maxTicksLimit: 5,
           padding: 10,
           // Include a dollar sign in the ticks
           callback: function(value, index, values) {
-            return '$' + number_format(value);
+            return number_format(value);
           }
         },
         gridLines: {
@@ -266,23 +288,31 @@ var myBarChart1C = new Chart(ctx, {
       callbacks: {
         label: function(tooltipItem, chart) {
           var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          return datasetLabel + ': $' + number_format(tooltipItem.yLabel);
+          return datasetLabel + number_format(tooltipItem.yLabel);
         }
       }
     },
   }
 });
+
 var ctx = document.getElementById("myBarChart1D");
-var myBarChart1D = new Chart(ctx, {
-  type: 'horizontalBar',
+var myBarChart1A = new Chart(ctx, {
+  type: 'bar',
   data: {
-    labels: ["January", "February", "March", "April", "May", "June"],
+    labels: ["4:00pm", "8:00pm", "12:00am", "4:00am", "8:00am", "12:00pm"],
     datasets: [{
-      label: "Revenue",
-      backgroundColor: "#4e73df",
-      hoverBackgroundColor: "#2e59d9",
+      label: 'Cleanliness Threshold: ',
+      data: [50, 50, 50, 50, 50, 50],
+      borderColor: "#e74a3b",
+      backgroundColor: '#00000000',
+      // Changes this dataset to become a line
+      type: 'line'
+  },{
+      label: "Cleanliness (%): ",
+      backgroundColor: "#00EE00",
+      hoverBackgroundColor: "#00CD00",
       borderColor: "#4e73df",
-      data: [4215, 5312, 6251, 7841, 9821, 14984],
+      data: [90, 87, 84, 82, 80, 78],
     }],
   },
   options: {
@@ -312,12 +342,12 @@ var myBarChart1D = new Chart(ctx, {
       yAxes: [{
         ticks: {
           min: 0,
-          max: 15000,
+          max: 100,
           maxTicksLimit: 5,
           padding: 10,
           // Include a dollar sign in the ticks
           callback: function(value, index, values) {
-            return '$' + number_format(value);
+            return number_format(value);
           }
         },
         gridLines: {
@@ -347,23 +377,31 @@ var myBarChart1D = new Chart(ctx, {
       callbacks: {
         label: function(tooltipItem, chart) {
           var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          return datasetLabel + ': $' + number_format(tooltipItem.yLabel);
+          return datasetLabel + number_format(tooltipItem.yLabel);
         }
       }
     },
   }
 });
+
 var ctx = document.getElementById("myBarChart1E");
-var myBarChart1E = new Chart(ctx, {
-  type: 'horizontalBar',
+var myBarChart1A = new Chart(ctx, {
+  type: 'bar',
   data: {
-    labels: ["January", "February", "March", "April", "May", "June"],
+    labels: ["4:00pm", "8:00pm", "12:00am", "4:00am", "8:00am", "12:00pm"],
     datasets: [{
-      label: "Revenue",
-      backgroundColor: "#4e73df",
-      hoverBackgroundColor: "#2e59d9",
+      label: 'Cleanliness Threshold: ',
+      data: [50, 50, 50, 50, 50, 50],
+      borderColor: "#e74a3b",
+      backgroundColor: '#00000000',
+      // Changes this dataset to become a line
+      type: 'line'
+  },{
+      label: "Cleanliness (%): ",
+      backgroundColor: "#00EE00",
+      hoverBackgroundColor: "#00CD00",
       borderColor: "#4e73df",
-      data: [4215, 5312, 6251, 7841, 9821, 14984],
+      data: [80, 77, 74, 72, 100, 92],
     }],
   },
   options: {
@@ -393,12 +431,12 @@ var myBarChart1E = new Chart(ctx, {
       yAxes: [{
         ticks: {
           min: 0,
-          max: 15000,
+          max: 100,
           maxTicksLimit: 5,
           padding: 10,
           // Include a dollar sign in the ticks
           callback: function(value, index, values) {
-            return '$' + number_format(value);
+            return number_format(value);
           }
         },
         gridLines: {
@@ -428,23 +466,31 @@ var myBarChart1E = new Chart(ctx, {
       callbacks: {
         label: function(tooltipItem, chart) {
           var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          return datasetLabel + ': $' + number_format(tooltipItem.yLabel);
+          return datasetLabel + number_format(tooltipItem.yLabel);
         }
       }
     },
   }
 });
+
 var ctx = document.getElementById("myBarChart1F");
-var myBarChart1F = new Chart(ctx, {
-  type: 'horizontalBar',
+var myBarChart1A = new Chart(ctx, {
+  type: 'bar',
   data: {
-    labels: ["January", "February", "March", "April", "May", "June"],
+    labels: ["4:00pm", "8:00pm", "12:00am", "4:00am", "8:00am", "12:00pm"],
     datasets: [{
-      label: "Revenue",
-      backgroundColor: "#4e73df",
-      hoverBackgroundColor: "#2e59d9",
+      label: 'Cleanliness Threshold: ',
+      data: [50, 50, 50, 50, 50, 50],
+      borderColor: "#e74a3b",
+      backgroundColor: '#00000000',
+      // Changes this dataset to become a line
+      type: 'line'
+  },{
+      label: "Cleanliness (%): ",
+      backgroundColor: "#00EE00",
+      hoverBackgroundColor: "#00CD00",
       borderColor: "#4e73df",
-      data: [4215, 5312, 6251, 7841, 9821, 14984],
+      data: [80, 77, 74, 72, 70, 100],
     }],
   },
   options: {
@@ -474,12 +520,12 @@ var myBarChart1F = new Chart(ctx, {
       yAxes: [{
         ticks: {
           min: 0,
-          max: 15000,
+          max: 100,
           maxTicksLimit: 5,
           padding: 10,
           // Include a dollar sign in the ticks
           callback: function(value, index, values) {
-            return '$' + number_format(value);
+            return number_format(value);
           }
         },
         gridLines: {
@@ -509,7 +555,7 @@ var myBarChart1F = new Chart(ctx, {
       callbacks: {
         label: function(tooltipItem, chart) {
           var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          return datasetLabel + ': $' + number_format(tooltipItem.yLabel);
+          return datasetLabel + number_format(tooltipItem.yLabel);
         }
       }
     },
