@@ -51,6 +51,7 @@ var myChart = new Chart(ctx, {
     }]
   },
   options: {
+    maintainAspectRatio: false,
     rotation: 1 * Math.PI,
     circumference: 1 * Math.PI,
     title: {
@@ -92,6 +93,7 @@ var myChart = new Chart(ctx, {
     }]
   },
   options: {
+    maintainAspectRatio: false,
     rotation: 1 * Math.PI,
     circumference: 1 * Math.PI,
     title: {
@@ -141,6 +143,7 @@ var myChart = new Chart(ctx, {
     }]
   },
   options: {
+    maintainAspectRatio: false,
     rotation: 1 * Math.PI,
     circumference: 1 * Math.PI,
     title: {
@@ -183,6 +186,7 @@ var myChart = new Chart(ctx, {
     }]
   },
   options: {
+    maintainAspectRatio: false,
     rotation: 1 * Math.PI,
     circumference: 1 * Math.PI,
     title: {
@@ -224,6 +228,7 @@ var myChart = new Chart(ctx, {
     }]
   },
   options: {
+    maintainAspectRatio: false,
     rotation: 1 * Math.PI,
     circumference: 1 * Math.PI,
     title: {
@@ -265,6 +270,7 @@ var myChart = new Chart(ctx, {
     }]
   },
   options: {
+    maintainAspectRatio: false,
     rotation: 1 * Math.PI,
     circumference: 1 * Math.PI,
     title: {

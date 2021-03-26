@@ -39,17 +39,16 @@ var myChart = new Chart(ctx, {
       backgroundColor: [
         '#4e73df',
         '#FFFFFF'
-
       ],
       borderColor: [
         '#9ea3a3',
         '#9ea3a3'
-
       ],
       borderWidth: 1
     }]
   },
   options: {
+    maintainAspectRatio: false,
     rotation: 1 * Math.PI,
     circumference: 1 * Math.PI,
     title: {
@@ -84,6 +83,7 @@ var myChart = new Chart(ctx, {
     }]
   },
   options: {
+    maintainAspectRatio: false,
     rotation: 1 * Math.PI,
     circumference: 1 * Math.PI,
     title: {
@@ -117,6 +117,7 @@ var myChart = new Chart(ctx, {
     }]
   },
   options: {
+    maintainAspectRatio: false,
     rotation: 1 * Math.PI,
     circumference: 1 * Math.PI,
     title: {
@@ -150,6 +151,7 @@ var myChart = new Chart(ctx, {
     }]
   },
   options: {
+    maintainAspectRatio: false,
     rotation: 1 * Math.PI,
     circumference: 1 * Math.PI,
     title: {
@@ -183,6 +185,7 @@ var myChart = new Chart(ctx, {
     }]
   },
   options: {
+    maintainAspectRatio: false,
     rotation: 1 * Math.PI,
     circumference: 1 * Math.PI,
     title: {
@@ -216,6 +219,7 @@ var myChart = new Chart(ctx, {
     }]
   },
   options: {
+    maintainAspectRatio: false,
     rotation: 1 * Math.PI,
     circumference: 1 * Math.PI,
     title: {
