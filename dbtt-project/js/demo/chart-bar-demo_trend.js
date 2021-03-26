@@ -132,10 +132,10 @@ var myBarChart1A = new Chart(ctx, {
       type: 'line'
     }, {
       label: "Occupants: ",
-      backgroundColor: "#4e73df",
+      backgroundColor: "#e74a3b",
       hoverBackgroundColor: "#2e59d9",
-      borderColor: "#4e73df",
-      data: [15, 0, 0, 0, 18, 18],
+      borderColor: "##e74a3b",
+      data: [15, 0, 0, 0, 18, 20],
       type: 'line'
     }],
   },
@@ -166,7 +166,7 @@ var myBarChart1A = new Chart(ctx, {
       yAxes: [{
         ticks: {
           min: 0,
-          max: 20,
+          max: 25,
           maxTicksLimit: 5,
           padding: 10,
           // Include a dollar sign in the ticks
