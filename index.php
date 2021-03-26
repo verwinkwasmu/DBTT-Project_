@@ -1,1 +1,1 @@
-<?php header('Location: /dbtt-project/crowdLevelDashboard.html'); ?>
+<?php header('Location: /dbtt-project/login.html'); ?>
