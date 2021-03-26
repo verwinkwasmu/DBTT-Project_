@@ -68,7 +68,7 @@ var myChart = new Chart(ctx, {
         }
       }
     }
-    
+
   }
 });
 var ctx = document.getElementById("myBarChart1B");
@@ -123,6 +123,7 @@ var myChart = new Chart(ctx, {
 
 var ctx = document.getElementById("myBarChart1C");
 var myChart = new Chart(ctx, {
+  
   type: 'doughnut',
   data: {
     labels: ["Current Hygiene Level"],
