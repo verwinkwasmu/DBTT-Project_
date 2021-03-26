@@ -29,489 +29,201 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 
 // Bar Chart Example
 var ctx = document.getElementById("myBarChart1A");
-var myBarChart1A = new Chart(ctx, {
-  type: 'bar',
+var myChart = new Chart(ctx, {
+  type: 'doughnut',
   data: {
-    labels: ["1:00pm", "2:00pm", "3:00pm", "4:00pm", "5:00pm", "6:00pm"],
+    labels: ["Number of Occupants"],
     datasets: [{
-      label: "Occupants",
-      backgroundColor: "#4e73df",
-      hoverBackgroundColor: "#2e59d9",
-      borderColor: "#4e73df",
-      data: [2, 5, 12, 6, 8, 10],
-    }],
+      label: '# of Votes',
+      data: [0, 15],
+      backgroundColor: [
+        '#4e73df',
+        '#FFFFFF'
+
+      ],
+      borderColor: [
+        '#9ea3a3',
+        '#9ea3a3'
+
+      ],
+      borderWidth: 1
+    }]
   },
   options: {
-    maintainAspectRatio: false,
-    layout: {
-      padding: {
-        left: 10,
-        right: 25,
-        top: 25,
-        bottom: 0
-      }
-    },
-    scales: {
-      xAxes: [{
-        time: {
-          unit: 'month'
-        },
-        gridLines: {
-          display: false,
-          drawBorder: false
-        },
-        ticks: {
-          maxTicksLimit: 6
-        },
-        maxBarThickness: 25,
-      }],
-      yAxes: [{
-        ticks: {
-          min: 0,
-          max: 30,
-          maxTicksLimit: 5,
-          padding: 10,
-          // Include a dollar sign in the ticks
-          callback: function(value, index, values) {
-            return number_format(value);
-          }
-        },
-        gridLines: {
-          color: "rgb(234, 236, 244)",
-          zeroLineColor: "rgb(234, 236, 244)",
-          drawBorder: false,
-          borderDash: [2],
-          zeroLineBorderDash: [2]
-        }
-      }],
-    },
-    legend: {
-      display: false
-    },
-    tooltips: {
-      titleMarginBottom: 10,
-      titleFontColor: '#6e707e',
-      titleFontSize: 14,
-      backgroundColor: "rgb(255,255,255)",
-      bodyFontColor: "#858796",
-      borderColor: '#dddfeb',
-      borderWidth: 1,
-      xPadding: 15,
-      yPadding: 15,
-      displayColors: false,
-      caretPadding: 10,
-      callbacks: {
-        label: function(tooltipItem, chart) {
-          var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          return datasetLabel + number_format(tooltipItem.yLabel);
-        }
-      }
-    },
+    rotation: 1 * Math.PI,
+    circumference: 1 * Math.PI,
+    title: {
+      display: true,
+      text: '0 / 15 Occupants',
+      fontSize: 15,
+      position: 'bottom'
+    }
+    
   }
 });
 
 var ctx = document.getElementById("myBarChart1B");
-var myBarChart1B = new Chart(ctx, {
-  type: 'horizontalBar',
+var myChart = new Chart(ctx, {
+  type: 'doughnut',
   data: {
-    labels: ["January", "February", "March", "April", "May", "June"],
+    labels: ["Number of Occupants"],
     datasets: [{
-      label: "Revenue",
-      backgroundColor: "#4e73df",
-      hoverBackgroundColor: "#2e59d9",
-      borderColor: "#4e73df",
-      data: [4215, 5312, 6251, 7841, 9821, 14984],
-    }],
+      label: '# of Votes',
+      data: [20 , 0],
+      backgroundColor: [
+        '#e74a3b',
+        '#FFFFFF'
+
+      ],
+      borderColor: [
+        '#9ea3a3',
+        '#9ea3a3'
+
+      ],
+      borderWidth: 1
+    }]
   },
   options: {
-    maintainAspectRatio: false,
-    layout: {
-      padding: {
-        left: 10,
-        right: 25,
-        top: 25,
-        bottom: 0
-      }
-    },
-    scales: {
-      xAxes: [{
-        time: {
-          unit: 'month'
-        },
-        gridLines: {
-          display: false,
-          drawBorder: false
-        },
-        ticks: {
-          maxTicksLimit: 6
-        },
-        maxBarThickness: 25,
-      }],
-      yAxes: [{
-        ticks: {
-          min: 0,
-          max: 15000,
-          maxTicksLimit: 5,
-          padding: 10,
-          // Include a dollar sign in the ticks
-          callback: function(value, index, values) {
-            return '$' + number_format(value);
-          }
-        },
-        gridLines: {
-          color: "rgb(234, 236, 244)",
-          zeroLineColor: "rgb(234, 236, 244)",
-          drawBorder: false,
-          borderDash: [2],
-          zeroLineBorderDash: [2]
-        }
-      }],
-    },
-    legend: {
-      display: false
-    },
-    tooltips: {
-      titleMarginBottom: 10,
-      titleFontColor: '#6e707e',
-      titleFontSize: 14,
-      backgroundColor: "rgb(255,255,255)",
-      bodyFontColor: "#858796",
-      borderColor: '#dddfeb',
-      borderWidth: 1,
-      xPadding: 15,
-      yPadding: 15,
-      displayColors: false,
-      caretPadding: 10,
-      callbacks: {
-        label: function(tooltipItem, chart) {
-          var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          return datasetLabel + ': $' + number_format(tooltipItem.yLabel);
-        }
-      }
-    },
+    rotation: 1 * Math.PI,
+    circumference: 1 * Math.PI,
+    title: {
+      display: true,
+      text: 'EXCEEDED',
+      fontSize: 15,
+      position: 'bottom'
+    }
+    
   }
 });
 var ctx = document.getElementById("myBarChart1C");
-var myBarChart1C = new Chart(ctx, {
-  type: 'horizontalBar',
+var myChart = new Chart(ctx, {
+  type: 'doughnut',
   data: {
-    labels: ["January", "February", "March", "April", "May", "June"],
+    labels: ["Number of Occupants"],
     datasets: [{
-      label: "Revenue",
-      backgroundColor: "#4e73df",
-      hoverBackgroundColor: "#2e59d9",
-      borderColor: "#4e73df",
-      data: [4215, 5312, 6251, 7841, 9821, 14984],
-    }],
+      label: '# of Votes',
+      data: [16, 4],
+      backgroundColor: [
+        '#4e73df',
+        '#FFFFFF'
+
+      ],
+      borderColor: [
+        '#9ea3a3',
+        '#9ea3a3'
+
+      ],
+      borderWidth: 1
+    }]
   },
   options: {
-    maintainAspectRatio: false,
-    layout: {
-      padding: {
-        left: 10,
-        right: 25,
-        top: 25,
-        bottom: 0
-      }
-    },
-    scales: {
-      xAxes: [{
-        time: {
-          unit: 'month'
-        },
-        gridLines: {
-          display: false,
-          drawBorder: false
-        },
-        ticks: {
-          maxTicksLimit: 6
-        },
-        maxBarThickness: 25,
-      }],
-      yAxes: [{
-        ticks: {
-          min: 0,
-          max: 15000,
-          maxTicksLimit: 5,
-          padding: 10,
-          // Include a dollar sign in the ticks
-          callback: function(value, index, values) {
-            return '$' + number_format(value);
-          }
-        },
-        gridLines: {
-          color: "rgb(234, 236, 244)",
-          zeroLineColor: "rgb(234, 236, 244)",
-          drawBorder: false,
-          borderDash: [2],
-          zeroLineBorderDash: [2]
-        }
-      }],
-    },
-    legend: {
-      display: false
-    },
-    tooltips: {
-      titleMarginBottom: 10,
-      titleFontColor: '#6e707e',
-      titleFontSize: 14,
-      backgroundColor: "rgb(255,255,255)",
-      bodyFontColor: "#858796",
-      borderColor: '#dddfeb',
-      borderWidth: 1,
-      xPadding: 15,
-      yPadding: 15,
-      displayColors: false,
-      caretPadding: 10,
-      callbacks: {
-        label: function(tooltipItem, chart) {
-          var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          return datasetLabel + ': $' + number_format(tooltipItem.yLabel);
-        }
-      }
-    },
+    rotation: 1 * Math.PI,
+    circumference: 1 * Math.PI,
+    title: {
+      display: true,
+      text: '16 / 20 Occupants',
+      fontSize: 15,
+      position: 'bottom'
+    }
+    
   }
 });
 var ctx = document.getElementById("myBarChart1D");
-var myBarChart1D = new Chart(ctx, {
-  type: 'horizontalBar',
+var myChart = new Chart(ctx, {
+  type: 'doughnut',
   data: {
-    labels: ["January", "February", "March", "April", "May", "June"],
+    labels: ["Number of Occupants"],
     datasets: [{
-      label: "Revenue",
-      backgroundColor: "#4e73df",
-      hoverBackgroundColor: "#2e59d9",
-      borderColor: "#4e73df",
-      data: [4215, 5312, 6251, 7841, 9821, 14984],
-    }],
+      label: '# of Votes',
+      data: [16, 4],
+      backgroundColor: [
+        '#4e73df',
+        '#FFFFFF'
+
+      ],
+      borderColor: [
+        '#9ea3a3',
+        '#9ea3a3'
+
+      ],
+      borderWidth: 1
+    }]
   },
   options: {
-    maintainAspectRatio: false,
-    layout: {
-      padding: {
-        left: 10,
-        right: 25,
-        top: 25,
-        bottom: 0
-      }
-    },
-    scales: {
-      xAxes: [{
-        time: {
-          unit: 'month'
-        },
-        gridLines: {
-          display: false,
-          drawBorder: false
-        },
-        ticks: {
-          maxTicksLimit: 6
-        },
-        maxBarThickness: 25,
-      }],
-      yAxes: [{
-        ticks: {
-          min: 0,
-          max: 15000,
-          maxTicksLimit: 5,
-          padding: 10,
-          // Include a dollar sign in the ticks
-          callback: function(value, index, values) {
-            return '$' + number_format(value);
-          }
-        },
-        gridLines: {
-          color: "rgb(234, 236, 244)",
-          zeroLineColor: "rgb(234, 236, 244)",
-          drawBorder: false,
-          borderDash: [2],
-          zeroLineBorderDash: [2]
-        }
-      }],
-    },
-    legend: {
-      display: false
-    },
-    tooltips: {
-      titleMarginBottom: 10,
-      titleFontColor: '#6e707e',
-      titleFontSize: 14,
-      backgroundColor: "rgb(255,255,255)",
-      bodyFontColor: "#858796",
-      borderColor: '#dddfeb',
-      borderWidth: 1,
-      xPadding: 15,
-      yPadding: 15,
-      displayColors: false,
-      caretPadding: 10,
-      callbacks: {
-        label: function(tooltipItem, chart) {
-          var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          return datasetLabel + ': $' + number_format(tooltipItem.yLabel);
-        }
-      }
-    },
+    rotation: 1 * Math.PI,
+    circumference: 1 * Math.PI,
+    title: {
+      display: true,
+      text: '16 / 20 Occupants',
+      fontSize: 15,
+      position: 'bottom'
+    }
+    
   }
 });
 var ctx = document.getElementById("myBarChart1E");
-var myBarChart1E = new Chart(ctx, {
-  type: 'horizontalBar',
+var myChart = new Chart(ctx, {
+  type: 'doughnut',
   data: {
-    labels: ["January", "February", "March", "April", "May", "June"],
+    labels: ["Number of Occupants"],
     datasets: [{
-      label: "Revenue",
-      backgroundColor: "#4e73df",
-      hoverBackgroundColor: "#2e59d9",
-      borderColor: "#4e73df",
-      data: [4215, 5312, 6251, 7841, 9821, 14984],
-    }],
+      label: '# of Votes',
+      data: [0, 20],
+      backgroundColor: [
+        '#4e73df',
+        '#FFFFFF'
+
+      ],
+      borderColor: [
+        '#9ea3a3',
+        '#9ea3a3'
+
+      ],
+      borderWidth: 1
+    }]
   },
   options: {
-    maintainAspectRatio: false,
-    layout: {
-      padding: {
-        left: 10,
-        right: 25,
-        top: 25,
-        bottom: 0
-      }
-    },
-    scales: {
-      xAxes: [{
-        time: {
-          unit: 'month'
-        },
-        gridLines: {
-          display: false,
-          drawBorder: false
-        },
-        ticks: {
-          maxTicksLimit: 6
-        },
-        maxBarThickness: 25,
-      }],
-      yAxes: [{
-        ticks: {
-          min: 0,
-          max: 15000,
-          maxTicksLimit: 5,
-          padding: 10,
-          // Include a dollar sign in the ticks
-          callback: function(value, index, values) {
-            return '$' + number_format(value);
-          }
-        },
-        gridLines: {
-          color: "rgb(234, 236, 244)",
-          zeroLineColor: "rgb(234, 236, 244)",
-          drawBorder: false,
-          borderDash: [2],
-          zeroLineBorderDash: [2]
-        }
-      }],
-    },
-    legend: {
-      display: false
-    },
-    tooltips: {
-      titleMarginBottom: 10,
-      titleFontColor: '#6e707e',
-      titleFontSize: 14,
-      backgroundColor: "rgb(255,255,255)",
-      bodyFontColor: "#858796",
-      borderColor: '#dddfeb',
-      borderWidth: 1,
-      xPadding: 15,
-      yPadding: 15,
-      displayColors: false,
-      caretPadding: 10,
-      callbacks: {
-        label: function(tooltipItem, chart) {
-          var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          return datasetLabel + ': $' + number_format(tooltipItem.yLabel);
-        }
-      }
-    },
+    rotation: 1 * Math.PI,
+    circumference: 1 * Math.PI,
+    title: {
+      display: true,
+      text: '0 / 20 Occupants',
+      fontSize: 15,
+      position: 'bottom'
+    }
+    
   }
 });
 var ctx = document.getElementById("myBarChart1F");
-var myBarChart1F = new Chart(ctx, {
-  type: 'horizontalBar',
+var myChart = new Chart(ctx, {
+  type: 'doughnut',
   data: {
-    labels: ["January", "February", "March", "April", "May", "June"],
+    labels: ["Number of Occupants"],
     datasets: [{
-      label: "Revenue",
-      backgroundColor: "#4e73df",
-      hoverBackgroundColor: "#2e59d9",
-      borderColor: "#4e73df",
-      data: [4215, 5312, 6251, 7841, 9821, 14984],
-    }],
+      label: '# of Votes',
+      data: [0, 15],
+      backgroundColor: [
+        '#4e73df',
+        '#FFFFFF'
+
+      ],
+      borderColor: [
+        '#9ea3a3',
+        '#9ea3a3'
+
+      ],
+      borderWidth: 1
+    }]
   },
   options: {
-    maintainAspectRatio: false,
-    layout: {
-      padding: {
-        left: 10,
-        right: 25,
-        top: 25,
-        bottom: 0
-      }
-    },
-    scales: {
-      xAxes: [{
-        time: {
-          unit: 'month'
-        },
-        gridLines: {
-          display: false,
-          drawBorder: false
-        },
-        ticks: {
-          maxTicksLimit: 6
-        },
-        maxBarThickness: 25,
-      }],
-      yAxes: [{
-        ticks: {
-          min: 0,
-          max: 15000,
-          maxTicksLimit: 5,
-          padding: 10,
-          // Include a dollar sign in the ticks
-          callback: function(value, index, values) {
-            return '$' + number_format(value);
-          }
-        },
-        gridLines: {
-          color: "rgb(234, 236, 244)",
-          zeroLineColor: "rgb(234, 236, 244)",
-          drawBorder: false,
-          borderDash: [2],
-          zeroLineBorderDash: [2]
-        }
-      }],
-    },
-    legend: {
-      display: false
-    },
-    tooltips: {
-      titleMarginBottom: 10,
-      titleFontColor: '#6e707e',
-      titleFontSize: 14,
-      backgroundColor: "rgb(255,255,255)",
-      bodyFontColor: "#858796",
-      borderColor: '#dddfeb',
-      borderWidth: 1,
-      xPadding: 15,
-      yPadding: 15,
-      displayColors: false,
-      caretPadding: 10,
-      callbacks: {
-        label: function(tooltipItem, chart) {
-          var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          return datasetLabel + ': $' + number_format(tooltipItem.yLabel);
-        }
-      }
-    },
+    rotation: 1 * Math.PI,
+    circumference: 1 * Math.PI,
+    title: {
+      display: true,
+      text: '0 / 15 Occupants',
+      fontSize: 15,
+      position: 'bottom'
+    }
+    
   }
 });
