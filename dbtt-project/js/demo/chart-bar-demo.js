@@ -198,37 +198,98 @@ var myChart = new Chart(ctx, {
   }
 });
 var ctx = document.getElementById("myBarChart1F");
-var myChart = new Chart(ctx, {
-  type: 'doughnut',
-  data: {
-    labels: ["Number of Occupants",""],
-    datasets: [{
-      label: '# of Votes',
-      data: [0, 15],
-      backgroundColor: [
-        '#4e73df',
-        '#FFFFFF'
-
-      ],
-      borderColor: [
-        '#9ea3a3',
-        '#9ea3a3'
-
-      ],
-      borderWidth: 1
-    }]
-  },
-  options: {
-    maintainAspectRatio: false,
-    rotation: 1 * Math.PI,
-    circumference: 1 * Math.PI,
-    title: {
-      display: true,
-      text: '0 / 15 Occupants',
-      fontSize: 15,
-      position: 'bottom'
+var chart = new Chart(ctx, {
+    type:"doughnut",
+    data: {
+        labels : ["Number of Occupants",""],
+        datasets: [{
+            label: "Gauge",
+            data : [5, 4],
+            backgroundColor: [
+              '#4e73df',
+              '#FFFFFF'
+                
+            ],
+            borderColor: [
+              '#9ea3a3',
+              '#9ea3a3'
+      
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        circumference: Math.PI,
+        rotation : Math.PI,
+        maintainAspectRatio: false,
+        title: {
+          display: true,
+          text: '0 / 20 Occupants',
+          fontSize: 15,
+          position: 'bottom'
+        },
+        plugins: {
+					  datalabels: {
+              backgroundColor: 'rgba(0, 0, 0, 0.7)',
+						  borderColor: '#ffffff',
+              color: function(context) {
+							  return context.dataset.backgroundColor;
+						  },
+						  font: function(context) {
+                var w = context.chart.width;
+                return {
+                  size: w < 512 ? 18 : 20
+                }
+              },
+              align: 'start',
+              anchor: 'start',
+              offset: 10,
+						  borderRadius: 4,
+						  borderWidth: 1,
+              formatter: function(value, context) {
+							  var i = context.dataIndex;
+                var len = context.dataset.data.length - 1;
+                if(i == len){
+                  return null;
+                }
+							  return value+' mph';
+						  }
+            }
+        }
+        
+        
     }
-    
-  }
 });
 
+
+function change_gauge(chart, label, data){
+  chart.data.datasets.forEach((dataset) => {
+    if(dataset.label == label){
+      dataset.data = data;
+    }  
+  });
+  chart.update();
+}
+
+var accelerating = false;
+function accelerate(){
+  accelerating = false;
+  window.setTimeout(function(){
+      change_gauge(chart,"Gauge",[5,4])
+  }, 1000);
+
+  window.setTimeout(function(){
+      change_gauge(chart,"Gauge",[6,4])
+  }, 2000);
+
+  
+}
+
+// Start sequence
+accelerate();
+window.setInterval(function(){
+  if(!accelerating){
+    acelerating = true;
+    accelerate();
+  }
+}, 6000);
