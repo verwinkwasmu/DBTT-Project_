@@ -224,7 +224,7 @@ var chart = new Chart(ctx, {
         maintainAspectRatio: false,
         title: {
           display: true,
-          text: '0 / 20 Occupants',
+          text: '5 / 20 Occupants',
           fontSize: 15,
           position: 'bottom'
         },
@@ -279,9 +279,10 @@ function accelerate(){
   }, 1000);
 
   window.setTimeout(function(){
-      change_gauge(chart,"Gauge",[6,4])
-  }, 2000);
+      change_gauge(chart,"Gauge",[9,4])
+      chart.options.title.text = "6 / 20 Occupants"
 
+  }, 2000);
   
 }
 
