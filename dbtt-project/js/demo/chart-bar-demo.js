@@ -204,7 +204,7 @@ var chart = new Chart(ctx, {
         labels : ["Number of Occupants",""],
         datasets: [{
             label: "Gauge",
-            data : [5, 4],
+            data : [9, 1],
             backgroundColor: [
               '#4e73df',
               '#FFFFFF'
@@ -224,7 +224,7 @@ var chart = new Chart(ctx, {
         maintainAspectRatio: false,
         title: {
           display: true,
-          text: '5 / 20 Occupants',
+          text: '18 / 20 Occupants',
           fontSize: 15,
           position: 'bottom'
         },
@@ -232,9 +232,7 @@ var chart = new Chart(ctx, {
 					  datalabels: {
               backgroundColor: 'rgba(0, 0, 0, 0.7)',
 						  borderColor: '#ffffff',
-              color: function(context) {
-							  return context.dataset.backgroundColor;
-						  },
+            
 						  font: function(context) {
                 var w = context.chart.width;
                 return {
@@ -275,14 +273,20 @@ var accelerating = false;
 function accelerate(){
   accelerating = false;
   window.setTimeout(function(){
-      change_gauge(chart,"Gauge",[5,4])
+      change_gauge(chart,"Gauge",[9,1])
+      chart.options.title.text = "18 / 20 Occupants"
+      chart.data.datasets[0].backgroundColor = ["#e74a3b", "#FFFFFF"]
+
+
   }, 1000);
 
   window.setTimeout(function(){
-      change_gauge(chart,"Gauge",[9,4])
-      chart.options.title.text = "6 / 20 Occupants"
+      change_gauge(chart,"Gauge",[9,0])
+      chart.options.title.text = "EXCEEDED"
+      chart.data.datasets[0].backgroundColor = ["#e74a3b", "#FFFFFF"]
+      chart.data.datasets[0].backgroundColor = ["#4e73df", "#FFFFFF"]
 
-  }, 2000);
+  }, 3000);
   
 }
 
