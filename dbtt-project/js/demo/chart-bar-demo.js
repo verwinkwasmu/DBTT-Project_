@@ -276,6 +276,7 @@ function accelerate(){
   accelerating = false;
   window.setTimeout(function(){
       change_gauge(chart,"Gauge",[5,4])
+      chart.options.title.text = "5 / 20 Occupants"
   }, 1000);
 
   window.setTimeout(function(){
