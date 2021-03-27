@@ -28,7 +28,7 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 }
 
 // Bar Chart Example
-var ctx = document.getElementById("myBarChart1A");
+var ctx = document.getElementById("myBarChart1F");
 var myChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
@@ -61,7 +61,7 @@ var myChart = new Chart(ctx, {
   }
 });
 
-var ctx = document.getElementById("myBarChart1B");
+var ctx = document.getElementById("myBarChart1E");
 var myChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
@@ -163,7 +163,7 @@ var myChart = new Chart(ctx, {
     
   }
 });
-var ctx = document.getElementById("myBarChart1E");
+var ctx = document.getElementById("myBarChart1B");
 var myChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
@@ -197,7 +197,7 @@ var myChart = new Chart(ctx, {
     
   }
 });
-var ctx = document.getElementById("myBarChart1F");
+var ctx = document.getElementById("myBarChart1A");
 var chart = new Chart(ctx, {
     type:"doughnut",
     data: {
@@ -273,17 +273,19 @@ var accelerating = false;
 function accelerate(){
   accelerating = false;
   window.setTimeout(function(){
-      change_gauge(chart,"Gauge",[9,1])
+      change_gauge(chart,"Gauge",[7,3])
+      chart.options.title.text = "17 / 20 Occupants"
+      // chart.data.datasets[0].backgroundColor = ["#e74a3b", "#FFFFFF"]
+      chart.data.datasets[0].backgroundColor = ["#4e73df", "#FFFFFF"]
+      
+      
+    }, 1000);
+    
+    window.setTimeout(function(){
+      change_gauge(chart,"Gauge",[8,2])
+      // chart.options.title.text = "EXCEEDED"
       chart.options.title.text = "18 / 20 Occupants"
-      chart.data.datasets[0].backgroundColor = ["#e74a3b", "#FFFFFF"]
-
-
-  }, 1000);
-
-  window.setTimeout(function(){
-      change_gauge(chart,"Gauge",[9,0])
-      chart.options.title.text = "EXCEEDED"
-      chart.data.datasets[0].backgroundColor = ["#e74a3b", "#FFFFFF"]
+      // chart.data.datasets[0].backgroundColor = ["#e74a3b", "#FFFFFF"]
       chart.data.datasets[0].backgroundColor = ["#4e73df", "#FFFFFF"]
 
   }, 3000);
