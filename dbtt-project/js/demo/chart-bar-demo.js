@@ -28,7 +28,7 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 }
 
 // Bar Chart Example
-var ctx = document.getElementById("myBarChart1F");
+var ctx = document.getElementById("myBarChart1A");
 var myChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
@@ -61,7 +61,7 @@ var myChart = new Chart(ctx, {
   }
 });
 
-var ctx = document.getElementById("myBarChart1E");
+var ctx = document.getElementById("myBarChart1B");
 var myChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
@@ -163,7 +163,7 @@ var myChart = new Chart(ctx, {
     
   }
 });
-var ctx = document.getElementById("myBarChart1B");
+var ctx = document.getElementById("myBarChart1E");
 var myChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
@@ -197,14 +197,14 @@ var myChart = new Chart(ctx, {
     
   }
 });
-var ctx = document.getElementById("myBarChart1A");
+var ctx = document.getElementById("myBarChart1F");
 var chart = new Chart(ctx, {
     type:"doughnut",
     data: {
         labels : ["Number of Occupants",""],
         datasets: [{
             label: "Gauge",
-            data : [9, 1],
+            data : [0, 1],
             backgroundColor: [
               '#4e73df',
               '#FFFFFF'
@@ -224,7 +224,7 @@ var chart = new Chart(ctx, {
         maintainAspectRatio: false,
         title: {
           display: true,
-          text: '18 / 20 Occupants',
+          text: '0 / 20 Occupants',
           fontSize: 15,
           position: 'bottom'
         },
@@ -260,43 +260,43 @@ var chart = new Chart(ctx, {
 });
 
 
-function change_gauge(chart, label, data){
-  chart.data.datasets.forEach((dataset) => {
-    if(dataset.label == label){
-      dataset.data = data;
-    }  
-  });
-  chart.update();
-}
+// function change_gauge(chart, label, data){
+//   chart.data.datasets.forEach((dataset) => {
+//     if(dataset.label == label){
+//       dataset.data = data;
+//     }  
+//   });
+//   chart.update();
+// }
 
-var accelerating = false;
-function accelerate(){
-  accelerating = false;
-  window.setTimeout(function(){
-      change_gauge(chart,"Gauge",[7,3])
-      chart.options.title.text = "17 / 20 Occupants"
-      // chart.data.datasets[0].backgroundColor = ["#e74a3b", "#FFFFFF"]
-      chart.data.datasets[0].backgroundColor = ["#4e73df", "#FFFFFF"]
+// var accelerating = false;
+// function accelerate(){
+//   accelerating = false;
+//   window.setTimeout(function(){
+//       change_gauge(chart,"Gauge",[7,3])
+//       chart.options.title.text = "17 / 20 Occupants"
+//       // chart.data.datasets[0].backgroundColor = ["#e74a3b", "#FFFFFF"]
+//       chart.data.datasets[0].backgroundColor = ["#4e73df", "#FFFFFF"]
       
       
-    }, 1000);
+//     }, 1000);
     
-    window.setTimeout(function(){
-      change_gauge(chart,"Gauge",[8,2])
-      // chart.options.title.text = "EXCEEDED"
-      chart.options.title.text = "18 / 20 Occupants"
-      // chart.data.datasets[0].backgroundColor = ["#e74a3b", "#FFFFFF"]
-      chart.data.datasets[0].backgroundColor = ["#4e73df", "#FFFFFF"]
+//     window.setTimeout(function(){
+//       change_gauge(chart,"Gauge",[8,2])
+//       // chart.options.title.text = "EXCEEDED"
+//       chart.options.title.text = "18 / 20 Occupants"
+//       // chart.data.datasets[0].backgroundColor = ["#e74a3b", "#FFFFFF"]
+//       chart.data.datasets[0].backgroundColor = ["#4e73df", "#FFFFFF"]
 
-  }, 3000);
+//   }, 3000);
   
-}
+// }
 
-// Start sequence
-accelerate();
-window.setInterval(function(){
-  if(!accelerating){
-    acelerating = true;
-    accelerate();
-  }
-}, 6000);
+// // Start sequence
+// accelerate();
+// window.setInterval(function(){
+//   if(!accelerating){
+//     acelerating = true;
+//     accelerate();
+//   }
+// }, 6000);

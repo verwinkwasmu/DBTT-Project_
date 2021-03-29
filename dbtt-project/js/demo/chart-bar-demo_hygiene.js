@@ -257,7 +257,7 @@ var chart = new Chart(ctx, {
       labels: ["Current Hygiene Level",""],
       datasets: [{
             label: "Gauge",
-            data : [6, 4],
+            data : [100, 0],
             backgroundColor: [
               'rgba(0, 230, 64, 1)',
               '#FFFFFF'
@@ -277,7 +277,7 @@ var chart = new Chart(ctx, {
         maintainAspectRatio: false,
         title: {
           display: true,
-          text: '75%',
+          text: '100%',
           fontSize: 15,
           position: 'bottom'
         },
@@ -315,36 +315,36 @@ var chart = new Chart(ctx, {
 });
 
 
-function change_gauge(chart, label, data){
-  chart.data.datasets.forEach((dataset) => {
-    if(dataset.label == label){
-      dataset.data = data;
-    }  
-  });
-  chart.update();
-}
+// function change_gauge(chart, label, data){
+//   chart.data.datasets.forEach((dataset) => {
+//     if(dataset.label == label){
+//       dataset.data = data;
+//     }  
+//   });
+//   chart.update();
+// }
 
-var accelerating = false;
-function accelerate(){
-  accelerating = false;
-  window.setTimeout(function(){
-      change_gauge(chart,"Gauge",[6,4])
-      chart.options.title.text = "75%"
-  }, 1000);
+// var accelerating = false;
+// function accelerate(){
+//   accelerating = false;
+//   window.setTimeout(function(){
+//       change_gauge(chart,"Gauge",[6,4])
+//       chart.options.title.text = "75%"
+//   }, 1000);
 
-  window.setTimeout(function(){
-      change_gauge(chart,"Gauge",[9,2])
-      chart.options.title.text = "85%"
+//   window.setTimeout(function(){
+//       change_gauge(chart,"Gauge",[9,2])
+//       chart.options.title.text = "85%"
 
-  }, 2000);
+//   }, 2000);
   
-}
+// }
 
-// Start sequence
-accelerate();
-window.setInterval(function(){
-  if(!accelerating){
-    acelerating = true;
-    accelerate();
-  }
-}, 6000);
+// // Start sequence
+// accelerate();
+// window.setInterval(function(){
+//   if(!accelerating){
+//     acelerating = true;
+//     accelerate();
+//   }
+// }, 6000);
